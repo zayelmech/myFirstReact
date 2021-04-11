@@ -56,3 +56,9 @@ Hasta esta clase todos los componentes han obtenido su información a través de
 
 - Para guardar la información en el estado se usa una función de la clase component llamada setState a la cual se le debe pasar un objeto con la información que se quiere guardar.
 - Aunque no se ve, la información está siendo guardada en dos sitios. Cada input guarda su propio valor y al tiempo la está guardando en setState, lo cual no es ideal. Para solucionarlo hay que modificar los inputs de un estado de no controlados a controlados.
+
+# Levantamiento del estado
+
+*Levantar el estado*  es una técnica de _React_ que pone el estado en una localización donde se le pueda pasar como _props_ a los componentes. Lo ideal es poner el estado en el lugar más cercano a todos los componentes que quieren compartir esa información.
+
+*Algo interesante* que le da el nombre a _React_ es su parte de “reactivo” ya que cada vez que hay un cambio en el estado o en los props que recibe un componente se vuelve a renderizar todo el componente y todos sus descendientes.
