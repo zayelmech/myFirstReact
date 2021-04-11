@@ -6,6 +6,8 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'bootstrap/dist/css/bootstrap.css';
+import './global.css'
 
 import Badge from './components/Badge';
 //const element= React.createElement('a',{href:'https://www.imecatro.com'},'Hola soy los children');
