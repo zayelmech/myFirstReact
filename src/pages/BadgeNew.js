@@ -1,10 +1,14 @@
 import React from 'react';
-
+//css
 import './styles/BadgeNew.css'
-import Navbar from '../components/Navbar';
 
-import header from '../images/badge-header.svg';
+//components
+import Navbar from '../components/Navbar';
 import Badge from '../components/Badge';
+import BadgeForm from '../components/BadgeForm';
+//imgs
+import header from '../images/badge-header.svg';
+
 
 class BadgeNew extends React.Component{
     render(){
@@ -12,7 +16,7 @@ class BadgeNew extends React.Component{
                 <div>
                     <Navbar />
                     <div className="BadgeNew__hero">
-                        <img className="img-fluid" src={header} className="img"/>
+                        <img className="img img-fluid" src={header} alt="imagen"/>
                     </div>
                     <div className="container">
                         <div className="row">
@@ -24,6 +28,9 @@ class BadgeNew extends React.Component{
                                 twitter="abdielcro"
                                 urlPhoto="https://www.gravatar.com/avatar?d=identicon"
                                 />
+                            </div>
+                            <div className="col-6">
+                                <BadgeForm />
                             </div>
                         </div>
                     </div>
