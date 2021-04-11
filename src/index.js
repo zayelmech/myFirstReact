@@ -11,6 +11,8 @@ import './global.css'
 
 import Badge from './components/Badge';
 import BageNew from './pages/BadgeNew';
+import  Badges from './pages/Badges';
+
 //const element= React.createElement('a',{href:'https://www.imecatro.com'},'Hola soy los children');
 
 /*
@@ -29,18 +31,26 @@ const elementJSX =
                 </div>;
 */
 let elementJSX;
-if (false) {
-    elementJSX = <Badge 
-    firstName="Abdiel" 
-    lastName="Carreño"
-    jobTitle="Ing. Mecatrónico" 
-    twitter="abdielcro"
-    urlPhoto="https://www.gravatar.com/avatar?d=identicon"
-    />;    
-} else {
-    elementJSX= <BageNew />;
-}
-
+const caso=3;
+switch (caso) {
+    case 1:
+        elementJSX = <Badge 
+            firstName="Abdiel" 
+            lastName="Carreño"
+            jobTitle="Ing. Mecatrónico" 
+            twitter="abdielcro"
+            urlPhoto="https://www.gravatar.com/avatar?d=identicon"
+            />;    
+        break;
+    case 2:
+        elementJSX= <BageNew />;
+        break;
+    case 3:
+        elementJSX= <Badges />;
+        break;
+    default:
+        break;
+} 
 
 //El profe no recomienda usar React Element, Es mejor usar JSX forever 
 const container =document.getElementById('app');

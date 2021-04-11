@@ -62,3 +62,7 @@ Hasta esta clase todos los componentes han obtenido su información a través de
 *Levantar el estado*  es una técnica de _React_ que pone el estado en una localización donde se le pueda pasar como _props_ a los componentes. Lo ideal es poner el estado en el lugar más cercano a todos los componentes que quieren compartir esa información.
 
 *Algo interesante* que le da el nombre a _React_ es su parte de “reactivo” ya que cada vez que hay un cambio en el estado o en los props que recibe un componente se vuelve a renderizar todo el componente y todos sus descendientes.
+
+## Listas de componentes
+
+`{Creando la pagina Badges y cumpliendo el reto de la calase 17}` 
