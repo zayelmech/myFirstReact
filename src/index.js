@@ -10,9 +10,9 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './global.css'
 
 import Badge from './components/Badge';
-import BageNew from './pages/BadgeNew';
+import BadgeNew from './pages/BadgeNew';
 import  Badges from './pages/Badges';
-
+import App from './components/App';
 //const element= React.createElement('a',{href:'https://www.imecatro.com'},'Hola soy los children');
 
 /*
@@ -31,7 +31,7 @@ const elementJSX =
                 </div>;
 */
 let elementJSX;
-const caso=3;
+const caso=4;
 switch (caso) {
     case 1:
         elementJSX = <Badge 
@@ -43,10 +43,13 @@ switch (caso) {
             />;    
         break;
     case 2:
-        elementJSX= <BageNew />;
+        elementJSX= <BadgeNew />;
         break;
     case 3:
         elementJSX= <Badges />;
+        break;
+    case 4:
+        elementJSX= <App />;
         break;
     default:
         break;
@@ -57,3 +60,4 @@ const container =document.getElementById('app');
 
 
 ReactDOM.render(elementJSX, container);
+
