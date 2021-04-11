@@ -5,9 +5,9 @@
 
 
 import React from 'react';
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom';
 
-
+import Badge from './components/Badge';
 //const element= React.createElement('a',{href:'https://www.imecatro.com'},'Hola soy los children');
 
 
@@ -17,11 +17,12 @@ const nombreFunction = ()=>{
 }
 const elementReact = React.createElement('h2',{},`Hola, soy un h2 incrustado  ${1}`);
 const elementJSX =
-<div>
-    <h1>Hello,Platzi Badges from React! {2+2}</h1>
-    <p>Mi nombre es {nombreFunction()} </p>
-    {elementReact}
-</div>;
+                <div>
+                    <h1>Hello,Platzi Badges from React! {2+2}</h1>
+                    <p>Mi nombre es {nombreFunction()} </p>
+                    {elementReact}
+                    {<Badge />}
+                </div>;
 //El profe no recomienda usar React Element, Es mejor usar JSX forever 
 const container =document.getElementById('app');
 
