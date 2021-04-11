@@ -14,7 +14,7 @@ Para identificarlos debes hacerte las siguientes preguntas:
 
 Identificar componentes es una habilidad esencial para poder desarrollar aplicaciones de React.
 
-# Componentes
+## Componentes
 - Es una buena práctica que los componentes vivan en su propio archivo y para ello se les crea una carpeta.
 - Todos los componentes requieren por lo menos el método render que define cuál será el resultado que aparecerá en pantalla.
 - El source de las imágenes en React puede contener direcciones en la web o se le puede hacer una referencia directa importándola. Si se importa deben usarse llaves para que sea evaluado.
@@ -49,3 +49,10 @@ Las páginas en React son componentes y conseguir distinguirlas nos servirá par
 ```
 -Los elementos button también tienen un evento que es _onClick_.
 -Cuando hay un botón dentro de un formulario, este automáticamente será de tipo _submit_. Si no queremos que pase así hay dos maneras de evitarlo: especificando que su valor es de tipo _button_ o manejándolo desde el formulario cuando ocurre el evento _onSubmit_.
+
+# Manejo de estado
+
+Hasta esta clase todos los componentes han obtenido su información a través de props que vienen desde afuera (otros componentes) pero hay otra manera en la que los componentes pueden producir su propia información y guardarla para ser consumida o pasada a otros componentes a través de sus props. La clave está en que la información del state a otros componentes pasará en una sola dirección y podrá ser consumida pero no modificada.
+
+- Para guardar la información en el estado se usa una función de la clase component llamada setState a la cual se le debe pasar un objeto con la información que se quiere guardar.
+- Aunque no se ve, la información está siendo guardada en dos sitios. Cada input guarda su propio valor y al tiempo la está guardando en setState, lo cual no es ideal. Para solucionarlo hay que modificar los inputs de un estado de no controlados a controlados.
