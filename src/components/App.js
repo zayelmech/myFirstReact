@@ -6,6 +6,7 @@ import BadgeNew from '../pages/BadgeNew';
 import  Badges from '../pages/Badges';
 import  NotFound from '../pages/NotFound';
 import Layout from '../components/Layout'
+import morty from '../pages/morty';
 
  function App(){
     return (
@@ -16,6 +17,7 @@ import Layout from '../components/Layout'
                     
                     <Route exact path="/badges/new" component={BadgeNew} />
                     <Route exact path="/badges" component={Badges} /> 
+                    <Route exact path="/RickandMorty" component={morty} /> 
                     <Route component={NotFound} />                                       
                 </Switch>
             </Layout>
@@ -35,6 +37,9 @@ function home() {
     </li>
     <li>
         <Link to="/badges">Badges</Link>
+    </li>
+    <li>
+        <Link to="/RickandMorty">Rick & Morty</Link>
     </li>
     <li>
         <Link to="/Menu">Menu</Link>

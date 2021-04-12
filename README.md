@@ -117,6 +117,8 @@ Cuando React renderiza los componentes decimos que entran en escena, cuando su e
 - Se llaman tres métodos: constructor, render, componentDidMount.
 
 ```js 
+constructor(){}
+render(){}
 componentDidMount(){}
 ```
 
@@ -126,6 +128,7 @@ componentDidMount(){}
 - Se llaman dos métodos: render, componentDidUpdate.
 
 ```js 
+render(){}
 componentDidUpdate(prevProps, prevState){}
 ```
 
@@ -137,3 +140,13 @@ componentDidUpdate(prevProps, prevState){}
 ```js 
 componentWillUnmount(){ /*Aqui podemos usar clearTimeout(this.timeOutId);  */}
 ```
+# Introducción llamadas a un API
+
+Las llamadas a una API siguen un patrón similar siempre que las hacemos, cada llamada consta de tres estados:
+
+- Loading: cuando la petición se envía y estamos esperando.
+- Error: se debe dejar un mensaje para el usuario para arreglar el error o volver a intentarlo.
+- Data: los datos nos pueden llegar de dos formas, o en error o con los datos requeridos.
+## llamadas a una API
+Una llamada a una API es un proceso asíncrono, es decir que lo comenzamos pero no sabemos cuándo acabará. Por lo mismo la función a escribir debe ser asíncrona.
+La llamada se hará usando fetch que es una función de JavaScript que al pasarle una dirección de internet, hará una petición GET y lo que sea que exista ahí será devuelto.
