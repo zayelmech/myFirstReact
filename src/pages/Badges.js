@@ -4,7 +4,11 @@ import './styles/Badges.css';
 //import Navbar from '../components/Navbar';
 import confLogo from '../images/badge-header.svg';
 import BadgesList from '../components/BadgesList';
+import PageLoading from '../components/PageLoading';
+import PageError from '../components/PageError';
 import api from "../api";
+
+
 class Badges extends React.Component {
    
     constructor(props){
@@ -58,7 +62,11 @@ class Badges extends React.Component {
     render() {
         if(this.state.loading){
             console.log('2/4 render');
-            return 'Loading...';
+            return <PageLoading />;
+        }
+        if(this.state.error){
+            
+            return <PageError error={this.state.error} />;
         }
         return (
             <React.Fragment>
