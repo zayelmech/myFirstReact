@@ -29,6 +29,7 @@ const api = {
       return callApi('/badges');
     },
     create(badge) {
+      //throw new Error('666: devil error');
       return callApi(`/badges`, {
         method: 'POST',
         body: JSON.stringify(badge),

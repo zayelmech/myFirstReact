@@ -11,15 +11,20 @@ import header from '../images/platziconf-logo.svg';
 
 //api
 import api from '../api';
+import PageLoading from '../components/PageLoading';
 
 class BadgeNew extends React.Component{
-    state = {form:{
-        firstName:'',
-        lastName:'',
-        email:'',
-        jobTitle:'',
-        twitter:'',
-    }};
+    state = {
+        loading:false,
+        error:null,
+        form:{
+            firstName:'',
+            lastName:'',
+            email:'',
+            jobTitle:'',
+            twitter:'',
+            }
+        };
     handleChange = e=>{
         //const nextForm = this.state.form;
         //nextForm[e.target.name] = e.target.value;
@@ -39,6 +44,7 @@ class BadgeNew extends React.Component{
             await api.badges.create(this.state.form);
             this.setState({ loading: false, error:null});
             console.log("Form was submit");
+            this.props.history.push('/badges');
         } catch (error) {
             this.setState({ loading: false, error:error})
         }
@@ -47,6 +53,10 @@ class BadgeNew extends React.Component{
 
     };
     render(){
+        if(this.state.loading){
+            return <PageLoading />
+        }
+        
         return (
                 <React.Fragment>
                     
@@ -69,6 +79,7 @@ class BadgeNew extends React.Component{
                                     onChange={this.handleChange}
                                     onSubmit={this.handleSubmit}
                                     formValues={this.state.form}
+                                    error={this.state.error}
                                     />
                             </div>
                         </div>

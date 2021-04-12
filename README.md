@@ -165,3 +165,16 @@ npm install md5
 
 ```
 Es una libreria que regresa el hash de MD5
+
+## Manejando los estados de la petición durante el POST
+
+De la misma manera en la que se manejan los estados cuando se solicitan datos, deben ser manejados cuando los datos son enviados.
+
+Existe un tiempo entre que se da clic y los datos son enviados. Ese tiempo de espera es necesario visualizarlo. Igual hay que mostrar mensajes de error cuando no funcionan las cosas.
+
+Si aplicamos el siguiente codigo en una funcion `async` 
+
+```js
+    this.props.history.push('/badges');
+```
+nos redigira automaticamente a la "pagina" que enlacemos dentro de _push_
