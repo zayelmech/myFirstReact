@@ -8,7 +8,6 @@ import PageLoading from '../components/PageLoading';
 import PageError from '../components/PageError';
 import api from "../api";
 
-
 class Badges extends React.Component {
    
     constructor(props){

@@ -15,22 +15,22 @@ export class BadgeForm extends Component {
     handleClick= e =>{
         console.log("Button was click");
     };
-    handleSubmit= e =>{
+/*    handleSubmit= e =>{
         e.preventDefault();
         console.log("Form was submit");
-    };
- 
+    };*/
+
     render() {
         return (
             <div>
                <h1>New Attendant</h1> 
-               <form onSubmit={this.handleSubmit}> 
+               <form onSubmit={this.props.onSubmit}> 
                     <div className="form-group">
                         <label >First Name</label>
                         <input 
                             onChange={this.props.onChange}
                             className="form-control" 
-                            placeholder="introduce tu nombre" 
+                            placeholder="escribe tu nombre" 
                             type="text"
                             name="firstName" 
                             value={this.props.formValues.firstName}
@@ -40,6 +40,7 @@ export class BadgeForm extends Component {
                             <input 
                                 onChange={this.props.onChange}
                                 className="form-control" 
+                                placeholder="escribe tu apellido" 
                                 type="text"
                                 name="lastName" 
                                 value={this.props.formValues.lastName}/>
@@ -49,6 +50,7 @@ export class BadgeForm extends Component {
                             <input 
                                 onChange={this.props.onChange}
                                 className="form-control"
+                                placeholder="escribe tu email" 
                                 type="email" 
                                 name="email" 
                                 value={this.props.formValues.email}/>
@@ -58,6 +60,7 @@ export class BadgeForm extends Component {
                             <input 
                                 onChange={this.props.onChange}
                                 className="form-control" 
+                                placeholder="escribe tu titulo de trabajo" 
                                 type="text" 
                                 name="jobTitle" 
                                 value={this.props.formValues.jobTitle}/>
@@ -67,6 +70,7 @@ export class BadgeForm extends Component {
                             <input 
                                 onChange={this.props.onChange}
                                 className="form-control" 
+                                placeholder="escribe tu twitter" 
                                 type="text" 
                                 name="twitter" 
                                 value={this.props.formValues.twitter}/>

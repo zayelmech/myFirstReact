@@ -25,8 +25,8 @@ const api = {
   badges: {
     list() {
       //return [];
-      throw new Error('666 Bestial error');
-      //return callApi('/badges');
+      //throw new Error('666: devil error');
+      return callApi('/badges');
     },
     create(badge) {
       return callApi(`/badges`, {

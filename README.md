@@ -150,3 +150,18 @@ Las llamadas a una API siguen un patrón similar siempre que las hacemos, cada l
 ## llamadas a una API
 Una llamada a una API es un proceso asíncrono, es decir que lo comenzamos pero no sabemos cuándo acabará. Por lo mismo la función a escribir debe ser asíncrona.
 La llamada se hará usando fetch que es una función de JavaScript que al pasarle una dirección de internet, hará una petición GET y lo que sea que exista ahí será devuelto.
+
+# Enviando datos (POST)
+
+MD5 es una pequeña librería a la cual se le da un texto y ella regresa un hash.
+
+Podremos hacer pruebas para cifrar nuestros textos a md5 en el siguiente sitio MD5 Online https://md5online.es/cifrar-md5
+
+Hola Platzi = d3bfb9302fb1007c0f996b41cba2818c
+
+Para usarla en nuestro repo debemos usar el siguiente comando en la terminal
+```npm
+npm install md5
+
+```
+Es una libreria que regresa el hash de MD5
