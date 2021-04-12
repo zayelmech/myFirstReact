@@ -13,9 +13,9 @@ import header from '../images/platziconf-logo.svg';
 import api from '../api';
 import PageLoading from '../components/PageLoading';
 
-class BadgeNew extends React.Component{
+class BadgeEdit extends React.Component{
     state = {
-        loading:false,
+        loading:true,
         error:null,
         form:{
             firstName:'',
@@ -25,6 +25,20 @@ class BadgeNew extends React.Component{
             twitter:'',
             }
         };
+    componentDidMount(){
+        this.fetchData();
+        }
+    fetchData=async(e)=>{
+        this.setState({ loading: true, error:null});
+        try {
+            const data =await api.badges.read(this.props.match.params.badgeId);
+            this.setState({ loading: false, form:data}
+
+            );
+        } catch (error) {
+            this.setState({ loading: false, error:error});
+        }
+    }    
     handleChange = e=>{
         //const nextForm = this.state.form;
         //nextForm[e.target.name] = e.target.value;
@@ -41,7 +55,7 @@ class BadgeNew extends React.Component{
         e.preventDefault();
         this.setState({ loading: true, error:null})
         try {
-            await api.badges.create(this.state.form);
+            await api.badges.update(this.props.match.params.badgeId,this.state.form);
             this.setState({ loading: false, error:null});
             console.log("Form was submit");
             this.props.history.push('/badges');
@@ -75,7 +89,7 @@ class BadgeNew extends React.Component{
                                 />
                             </div>
                             <div className="col-6">
-                                <h1>New Attendant</h1> 
+                            <h1>Editar</h1> 
                                 <BadgeForm 
                                     onChange={this.handleChange}
                                     onSubmit={this.handleSubmit}
@@ -91,4 +105,4 @@ class BadgeNew extends React.Component{
     }
         
 }
-export default BadgeNew;
+export default BadgeEdit;
