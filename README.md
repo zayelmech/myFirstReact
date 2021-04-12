@@ -178,3 +178,12 @@ Si aplicamos el siguiente codigo en una funcion `async`
     this.props.history.push('/badges');
 ```
 nos redigira automaticamente a la "pagina" que enlacemos dentro de _push_
+
+# Actualizaciones automáticas
+
+**Polling** consiste en que cada cierto tiempo que es definido por nosotros se buscan los datos y se actualizan automáticamente. Esto se hará constantemente hasta que el usuario se vaya de la página.
+
+No es recomendada para desarrollos reales ya que se harán peticiones al servidor por cada usuario cada n segundos
+
+# CRUD
+**CRUD** es el acrónimo de “Crear, Leer, Actualizar y Borrar” (del original en inglés: Create, Read, Update and Delete) Adicional todas las operaciones de tipo CRUD son aplicadas a la base de datos, es decir, creamos elementos de la base de dato, leemos y actualizamos.

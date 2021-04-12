@@ -5,6 +5,7 @@ import { BrowserRouter ,Switch, Route, Link } from 'react-router-dom';
 import BadgeNew from '../pages/BadgeNew';
 import  Badges from '../pages/Badges';
 import  BadgeEdit from '../pages/BadgeEdit';
+import  BadgeDetails from '../pages/BadgeDetails';
 import  NotFound from '../pages/NotFound';
 import Layout from '../components/Layout'
 import morty from '../pages/morty';
@@ -20,6 +21,7 @@ import morty from '../pages/morty';
                     <Route exact path="/badges" component={Badges} /> 
                     <Route exact path="/RickandMorty" component={morty} /> 
                     <Route exact path="/badges/:badgeId/edit" component={BadgeEdit} /> 
+                    <Route exact path="/badges/:badgeId" component={BadgeDetails} /> 
                     <Route component={NotFound} />                                       
                 </Switch>
             </Layout>
