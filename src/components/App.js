@@ -16,7 +16,7 @@ import morty from '../pages/morty';
             <Layout>
                 <Switch>
                     <Route exact path="/" component={home} />
-                    
+                    <Route exact path="/myFirstReact" component={home} />
                     <Route exact path="/badges/new" component={BadgeNew} />
                     <Route exact path="/badges" component={Badges} /> 
                     <Route exact path="/RickandMorty" component={morty} /> 
